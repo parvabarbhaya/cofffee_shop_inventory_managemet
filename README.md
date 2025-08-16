@@ -232,6 +232,7 @@ class Bookings (models.Model):
 
 <h2>🧠 views.py</h2></br>
 This file contains the core logic for processing incoming HTTP requests and generating appropriate HTTP responses. A view function or class-based view acts as the intermediary between a user's request and the application's data models and templates. It receives request data, executes the necessary business logic—which may involve querying the database via the models—and then returns a response, which is frequently a dynamically rendered HTML template populated with the retrieved data.
+
 ```ruby
 from django.db import models
 
