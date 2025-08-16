@@ -1,0 +1,78 @@
+/* contact.css */
+
+body {
+    background-color: #f5f5dc; /* Beige background color */
+    font-family: Arial, sans-serif;
+    color: #3e2723; /* Dark coffee color */
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fffaf0; /* Light coffee color */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    text-align: center;
+    color: #5d4037; /* Coffee color */
+}
+
+.form-label {
+    font-weight: bold;
+    color: #3e2723; /* Dark coffee color */
+}
+
+.form-control {
+    border: 1px solid #8d6e63; /* Light coffee color */
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fffaf0; /* Light coffee color */
+}
+
+.form-select {
+    border: 1px solid #8d6e63; /* Light coffee color */
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #fffaf0; /* Light coffee color */
+}
+
+.btn-primary {
+    background-color: #6d4c41; /* Coffee color */
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.btn-primary:hover {
+    background-color: #5d4037; /* Darker coffee color */
+}
+
+.btn-home {
+    background-color: #a1887f; /* Light coffee color */
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 10px;
+}
+
+.btn-home-1 {
+    text-decoration: none;
+    color: #fff;
+}
+
+.btn-home:hover {
+    background-color: #8d6e63; /* Darker light coffee color */
+}
+.alert.alert-success.alert-dismissible.fade.show {
+    position: absolute;
+    top: 18px;
+}

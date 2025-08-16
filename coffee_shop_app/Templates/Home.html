@@ -1,0 +1,226 @@
+{% extends "Index.html" %}
+{% load static %}
+{% block title %}
+<link rel="stylesheet" href="{% static 'Home.css' %}">
+{% endblock%}
+{% block body %}
+
+
+{% if messages %}
+
+{% for message in messages %}
+
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+
+  <strong>{{ message }}</strong>
+
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+
+</div>
+
+{% endfor %}
+{% endif %}
+
+<h1 style= "font-style: italic;">{{request.user.first_name}} {{request.user.last_name}}</h1>
+<h1 style = "color:brown"> Welcome to the site !</h1>
+<section class="home container" id="home">
+    <div class="home-text">
+      <h1>
+        Enjoy a new blend <br />
+        of coffee beans
+      </h1>
+      <p>
+        Brew or order a Perfect Coffee based on your mood Anywhere Anytime
+      </p>
+      <a href="/Menu/" class="btn">
+        <span>Shop Now</span>
+        <i class="bx bx-up-arrow-alt"></i>
+      </a>
+    </div>
+    <!-- Home Image -->
+    <img src="static/hero.png" alt="" class="home-img" />
+  </section>
+  <!-- Services -->
+  <section class="services container" id="services">
+    <!-- Heading -->
+    <div class="heading">
+      <h2>
+        Blending culture, coffee & top <br />
+        notch services
+      </h2>
+    </div>
+    <div class="service-content">
+      <div class="ser-box">
+        <img src="static/ser-1.png" alt="" />
+        <p>Equiment</p>
+      </div>
+      <div class="ser-box">
+        <img src="static/ser-2.png" alt="" />
+        <p>Type Of Coffee</p>
+      </div>
+      <div class="ser-box">
+        <img src="static/ser-3.png" alt="" />
+        <p>Take A Way</p>
+      </div>
+      <div class="ser-box">
+        <img src="static/ser-4.png" alt="" />
+        <p>Beans Varient</p>
+      </div>
+      <div class="ser-box">
+        <img src="static/ser-5.png" alt="" />
+        <p>Pastry</p>
+      </div>
+    </div>
+  
+  <!-- Review -->
+  <section class="review container" id="review">
+    <div class="heading">
+      <h2>Customer's Reviews</h2>
+    </div>
+    <!-- Swiper -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="review-box">
+            <img src="static/review-1.jpg" alt="" />
+            <h2>Jonas Blue</h2>
+            <span
+              >The taste of coffee is Stunning,<br />
+              subtle and smooth flavor.</span
+            >
+            <p>
+              The taste of coffee can vary depending on the type of bean,
+              roast level, and brewing method used. Some people prefer a
+              strong and bold taste, while others prefer a more subtle and
+              smooth flavor.
+            </p>
+          </div>
+        </div>
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="review-box">
+            <img src="static/review-2.jpg" alt="" />
+            <h2>Eden Blue</h2>
+            <span
+              >The taste of coffee is Stunning,<br />
+              subtle and smooth flavor.</span
+            >
+            <p>
+              The taste of coffee can vary depending on the type of bean,
+              roast level, and brewing method used. Some people prefer a
+              strong and bold taste, while others prefer a more subtle and
+              smooth flavor.
+            </p>
+          </div>
+        </div>
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="review-box">
+            <img src="static/review-3.jpg" alt="" />
+            <h2>Charlie</h2>
+            <span
+              >The taste of coffee is Stunning,<br />
+              subtle and smooth flavor.</span
+            >
+            <p>
+              The taste of coffee can vary depending on the type of bean,
+              roast level, and brewing method used. Some people prefer a
+              strong and bold taste, while others prefer a more subtle and
+              smooth flavor.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+  <!-- Book -->
+  <section class="book container" id="book">
+    
+    <img src="static/book.jpg" alt="" class="book-img" />
+    
+    <div class="book-overlay"></div>
+    
+    <div class="book-data">
+    
+    
+      <h2>
+        Let's book a Table <br />
+        For you
+      </h2>
+    
+      <form action="/" method="post">
+        {% csrf_token %} 
+        
+
+        <!-- <form action="" -->
+        <div class="input-box">
+          
+          <i class="bx bx-phone-call"></i>
+          
+          <input type="text" name="person_name" placeholder="Mr/Mrs" required />
+        
+        </div>
+
+        <div class="input-box">
+          
+          <i class="bx bx-phone-call"></i>
+          
+          <input type="tel" name="person_number" placeholder="Your Number" required/>
+        
+        </div>
+        
+        <div class="input-box">
+        
+          <i class="bx bx-user"></i>
+
+          <input type="number" name="population" placeholder="People" required />
+        
+        </div>
+        
+        {% comment %} <a  class="book-btn">Book Table</a> {% endcomment %}
+        <button type="submit" class="book-btn">submit</button>
+      </form>
+      
+      <p>We will contact you to confirm your booking</p>
+    
+    </div>
+  
+  </section>
+  
+ 
+  <!-- Footer -->
+  <section class="footer container">
+    <div class="footer-box">
+      <a href="#" class="logo">Q.Cafe</a>
+      <div class="social">
+        <a href="#"><i class="bx bxl-twitch"></i></a>
+        <a href="#"><i class="bx bxl-twitter"></i></a>
+        <a href="#"><i class="bx bxl-linkedin"></i></a>
+        <a href="#"><i class="bx bxl-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-box">
+      <h3>About</h3>
+      <a href="#">Our Story</a>
+      <a href="#">FAQ</a>
+      <a href="#">Careers</a>
+    </div>
+    <div class="footer-box">
+      <h3>Customer's Recourses</h3>
+      <a href="#">Menu</a>
+      <a href="#">Location</a>
+      <a href="#">Support</a>
+    </div>
+    <div class="footer-box">
+      <h3>Services</h3>
+      <a href="#">Payment Options</a>
+      <a href="#">Refunds & Exchanges</a>
+      <a href="#">Limitation Of Liability</a>
+    </div>
+  </section>
+ </body>
+</html>
+
+{% endblock body %}

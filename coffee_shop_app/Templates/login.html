@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+     {% block title %}
+     <link rel="stylesheet" href="{% static "us_login.css" %}">
+     {% endblock %}
+	 <body>
+		<div class="container" id="container">
+			<div class="form-container sign-up-container">
+				<form action="/login/" method="post">
+					{% csrf_token %}
+					<img src="{% static 'Coffee_Logo1.png' %}" alt="Site Logo" class="site-logo">
+					<h1>Login into Account</h1>
+					<p class="quote">"A cup of coffee shared with a friend is happiness tasted and time well spent."</p>
+					<div class="social-container">
+						<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
+						<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
+						<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+					</div>
+					<input type="text" placeholder="Username" name="username" required />
+					<input type="password" placeholder="Password" name="password" required />
+					<button>Login</button>
+				</form>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,47 @@
+{% extends "Index.html" %}
+ {% load static %} 
+ {% block title %}
+<link rel="stylesheet" href="{% static 'Menu.css' %}" />
+{% endblock %}
+ {% block body %} 
+
+<div class="heading">
+  <h2>Our Top Selling Products</h2>
+  <p>
+    It takes a lot of heart and hard work at every step to create the best
+    coffee possible, and we know it takes a lot of grit to keep your own grind
+    going.
+  </p>
+</div>
+
+<!-- Responsive grid container for product cards -->
+<div class="product-row" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: flex-start;">
+  {% for item in Data %}
+    <div class="product-content" style="flex: 0 1 320px;">
+      <form action="#" method="post">
+        {% csrf_token %}
+        <div class="product-box">
+          <h2><i class="bx bx-heart heart-icon">{{ item.Coffee_type }}</i></h2>
+          <img src="{{item.image}}" alt="{{item.Coffee_type}}" />
+          {% comment %} <p>4 Types Avaialble</p> {% endcomment %}
+          <h2>{{item.Coffee_type}}</h2>
+          <p>{{ item.discripsion }}</p>
+          <h5>Rs {{ item.price }}</h5>
+          <div class="product-info">
+            <span>
+              <div class="item-action">
+                <label for="quantity">INsert quantity:-</label>
+                <input type="number" name="quantity" min="1" max="{{ item.quantity }}" required/>
+                <button type="submit" name="item_id" value="{{ item.id }}">
+                  Order
+                </button>
+              </div>
+            </span>
+            <i class="bx bx-shopping-bag"></i>
+          </div>
+        </div>
+      </form>
+    </div>
+  {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,88 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.invoice-box {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #eee;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    max-width: 800px;
+    width: 100%;
+    margin: auto;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+h1 {
+    color: #6f4e37; 
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.company-details, .invoice-details {
+    margin-bottom: 20px;
+}
+
+.company-details div, .invoice-details div {
+    margin: 5px 0;
+}
+
+.invoice-details {
+    text-align: right;
+}
+
+.invoice-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.invoice-table th, .invoice-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+.invoice-table th {
+    background-color: #f4e4d4; 
+    color: #4b2e26;
+}
+
+.invoice-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.invoice-table tr:hover {
+    background-color: #f1e5d6; /* Slight coffee shade on hover */
+}
+
+.btn-home {
+    background-color: #6f4e37; 
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.btn-home a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn-home:hover {
+    background-color: #4b2e26; /* Darker coffee shade on hover */
+}

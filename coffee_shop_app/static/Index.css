@@ -1,0 +1,24 @@
+/* Index.css */
+
+.navbar-brand img {
+    height: 50px;
+    width: auto;
+    border-radius: 50vh;
+}
+
+
+.navbar-nav .nav-item .nav-link {
+    font-weight: bold;
+}
+
+
+.dropdown-menu .dropdown-item {
+    font-weight: bold;
+}
+
+
+.navbar-nav .nav-item .nav-link:hover,
+.dropdown-menu .dropdown-item:hover {
+    color: #f8c471; 
+    background-color: #3e2723; 
+}

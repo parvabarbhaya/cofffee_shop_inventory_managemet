@@ -1,0 +1,61 @@
+{% comment %} {% extends "Index.html" %} {% endcomment %}
+{% load static %}
+{% block title %}
+<link rel="stylesheet" href=" {% static "Bill.css" %} ">
+{% endblock %}
+
+{% block body %}
+<div class="invoice-box">
+    <h1>Invoice</h1>
+    
+    <div class="company-details">
+        <div>Company Name</div>
+        <div>Phone: (555) 555-5555</div>
+    </div>
+
+    <div class="invoice-details">
+        <div>#invoice_No--{{ invoice_No }}</div>
+        <div>Date: <span id="invoice-date"></span></div>
+    </div>
+
+    <table class="invoice-table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Description</th>
+                <th>Quantity</th>
+                <th>Unit Price</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        
+        <tbody>
+            {% for itemss in main2%}
+            <tr>
+                <td>{{ forloop.counter }}</td>
+                <td>{{ itemss.menu_items.Coffee_type }}</td>
+                <td>{{ itemss.quantity_sold }}</td>
+                <td>Rs{{ itemss.price }}</td>
+                <td>Rs{{ itemss.Total_Price }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+
+        <tfoot>
+            <tr>
+                <td colspan="4" class="total-label">Grand Total</td>
+                <td>Rs{{ grand_total }}</td>
+            </tr>
+    </table>
+    
+    <button type="submit" class="btn-home"><a href="/" class="btn-home-1">Home</a></button>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const dateElement = document.getElementById("invoice-date");
+    const currentDate = new Date().toLocaleDateString();
+    dateElement.textContent = currentDate;
+});
+</script>
+{% endblock body %}

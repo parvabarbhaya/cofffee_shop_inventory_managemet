@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px 0;
+        }
+        #output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Content</h1>
+
+        <button id="myButton">Click Me</button>
+
+        <input type="text" id="myInput" placeholder="Enter text here">
+
+        <div id="output"></div>
+    </div>
+
+    <script>
+        document.getElementById("myButton").addEventListener("click", function() {
+            alert("Button Clicked!");
+        });
+
+        document.getElementById("myInput").addEventListener("input", function() {
+            document.getElementById("output").innerText = "You entered: " + this.value;
+        });
+    </script>
+</body>
+</html>
