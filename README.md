@@ -43,7 +43,7 @@ graph TD;
 
 
 ## key Django Files with code understanding and excution 
-⚙️ manage.py
+<h2>⚙️ manage.py</h2></br>
 This file provides a command-line interface for interacting with the Django project. It is utilized for executing administrative tasks such as initiating the development server, creating new applications, and applying database migrations. Consequently, it functions as the primary utility for project management operations.
 
 ```ruby
@@ -72,10 +72,10 @@ if __name__ == "__main__":
 
 ```
 
-🎛️ settings.py
+<h2>🎛️ settings.py</h2></br>
 As the central configuration file, settings.py governs the entire project's operational parameters. It contains critical definitions for the database connection, registered applications, middleware components, and other foundational configurations. This file is integral to defining the project's runtime behavior and its integration with various services.
 
-🔗 urls.py
+<h2>🔗 urls.py</h2></br>
 The urls.py file serves as the primary URL dispatcher for the project. It contains a mapping of URL patterns to their corresponding view functions, thereby directing incoming web requests to the appropriate application logic. This mechanism effectively serves as the navigational framework for the website.
 
 ```ruby
@@ -94,7 +94,7 @@ urlpatterns = [
 ]
 ```
 
-💾 migrations/
+<h2>💾 migrations/</h2></br>
 This directory contains a version-controlled history of the database schema. Django's migration system automatically generates scripts within this folder in response to modifications in the models.py file. These scripts facilitate the systematic and reliable evolution of the database structure across different environments.
 > [!NOTE]
 > This is one of the migration:
@@ -158,7 +158,7 @@ class Migration(migrations.Migration):
 ```
 
 
-🛡️ admin.py
+<h2>🛡️ admin.py</h2></br>
 The admin.py file is used to register application models with Django's built-in administrative interface. By registering a model, its data becomes accessible for creation, retrieval, updating, and deletion operations within the admin panel. This provides a powerful and convenient interface for data management.
 
 ```ruby
@@ -171,7 +171,7 @@ admin.site.register(Contact)
 admin.site.register(Bookings)
 ```
 
-🧩 apps.py
+<h2>🧩 apps.py</h2></br>
 Each application within a Django project includes an apps.py file for its specific configuration. This file allows for the definition of application-specific attributes and metadata. It is primarily used to declare the application's configuration class, which is then registered in the project's settings.py file.
 
 ```ruby
@@ -183,7 +183,7 @@ class CoffeeShopAppConfig(AppConfig):
     name = "coffee_shop_app"
 ```
 
-📜 models.py
+<h2>📜 models.py</h2></br>
 The models.py file is where the data structure of an application is defined through Python classes. Each class, inheriting from django.db.models.Model, corresponds to a table in the database. This file, therefore, constitutes the definitive blueprint for the application's data storage and organization.
 
 > [!IMPORTANT]
@@ -230,7 +230,7 @@ class Bookings (models.Model):
     
 ```
 
-🧠 views.py
+<h2>🧠 views.py</h2></br>
 This file contains the core logic for processing incoming HTTP requests and generating appropriate HTTP responses. A view function or class-based view acts as the intermediary between a user's request and the application's data models and templates. It receives request data, executes the necessary business logic—which may involve querying the database via the models—and then returns a response, which is frequently a dynamically rendered HTML template populated with the retrieved data.
 ```ruby
 from django.db import models
