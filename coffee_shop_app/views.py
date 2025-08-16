@@ -106,3 +106,4 @@ def Logoutuser(request):
 
 # admin username=admin_12345
 # password= admin_1234
+# thanks for viewing the code
