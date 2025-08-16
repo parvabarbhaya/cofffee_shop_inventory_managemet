@@ -346,3 +346,12 @@ def Logoutuser(request):
     
 ```
 
+<img width="313" height="341" alt="login_page" src="https://github.com/user-attachments/assets/cc202705-5e27-48cc-b0f5-d37c37233e6b" />
+<img width="1365" height="630" alt="Home_page" src="https://github.com/user-attachments/assets/bd05852a-1070-4e24-92fe-94879fa97a9f" />
+<img width="1170" height="98" alt="toggle_options" src="https://github.com/user-attachments/assets/2c44f102-1e44-4e6f-84e0-cf4d48b3ffe9" />
+<img width="1138" height="435" alt="Table_booking_page" src="https://github.com/user-attachments/assets/62c4f1c5-1579-44f3-8cf1-2073428d464c" />
+<img width="353" height="40" alt="sucess_messge" src="https://github.com/user-attachments/assets/6a12ab48-11eb-488b-8260-7686ccb82227" />
+<img width="941" height="524" alt="Menu_page" src="https://github.com/user-attachments/assets/5951a301-72a1-4332-bc37-068da93370f1" />
+<img width="375" height="289" alt="Contact_page" src="https://github.com/user-attachments/assets/50b61bf0-0dfd-4a87-91c2-d9b153ee7521" <img width="614" height="596" alt="Bill_page" src="https://github.com/user-attachments/assets/e37b04ba-e5d6-4f2c-9464-5763cf67b8bd" />
+<img width="1360" height="586" alt="admin_page" src="https://github.com/user-attachments/assets/25841efd-deb2-46d4-9ec6-218d26fb88dd" />
+/>
